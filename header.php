@@ -104,15 +104,15 @@
                theBookStore
            </div>
            <div id="menuBar">
-              <div class="menuItem" id="Books"><a href="index.php">Books</div>
-              <div class="menuItem" id="Categories"><a href="#">Categories</div>
-              <div class="menuItem" id="Users"><a href="#">Users</div>
+             <div class="menuItem" id="Books"><a href="index.php">Books</a></div>
+               <div class="menuItem" id="Categories"><a href="#">Categories</a>a></div>
+               <div class="menuItem" id="Users"><a href="#">Users</a></div>
                
            </div>
            
            <div id="loginMenu">
-              <div class="loginMenuItem"><a href="login.php">login</div>
-              <div class="loginMenuItem"><a href="register.php">Sign-up</div>
+               <div class="loginMenuItem"><a href="login.php">login</a></div>
+               <div class="loginMenuItem"><a href="register.php">Sign-up</a></div>
               
                
            </div>
