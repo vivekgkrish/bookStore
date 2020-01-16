@@ -105,7 +105,7 @@
            </div>
            <div id="menuBar">
              <div class="menuItem" id="Books"><a href="index.php">Books</a></div>
-               <div class="menuItem" id="Categories"><a href="#">Categories</a>a></div>
+               <div class="menuItem" id="Categories"><a href="#">Categories</a></div>
                <div class="menuItem" id="Users"><a href="#">Users</a></div>
                
            </div>
