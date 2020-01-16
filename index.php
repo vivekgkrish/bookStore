@@ -2,25 +2,53 @@ $ echo '{}' > composer.json
 $ git add composer.json
 $ git commit -m "add composer.json for PHP app detection"
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <?php include "header.php" ?>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+       
+       <div id="book">
+           <table id="books">
+               <tr>
+                   <th>Book Name</th>
+                   <th>Author</th>
+                   <th>Price</th>
+                   <th>Image</th>
+               </tr>
+               
+               <?php
+                    $query= "SELECT b.book_id AS book_id,b.book_title AS book_name, b.book_price AS book_price, b.book_image AS book_image,b.author_name AS author_name  from books b  INNER JOIN category c ON b.cat_id = c.cat_id";
+                    $select_books = mysqli_query($connection,$query);
+                    
+//var_dump($select_books);
+    
+                    while($row = mysqli_fetch_assoc($select_books)){
+                        $book_name = $row['book_name'];
+                        $author_name = $row['author_name'];
+                        $book_price = $row['book_price'];
+                        $book_image = $row['book_image']; ?>
+                        
+                        
+                        
+                        
+                <tr>
+                   <td><?php echo $book_name ?></td>
+                   <td><?php echo $author_name ?></td>
+                   <td><?php echo $book_price ?></td>
+                   <td><img src="<?php echo $book_image ?>"></td>
+               </tr>
+                 <?php   }
+               
+               ?>
+               
+               
+             
+           </table>
+           
+       </div>
+       
+       
+   </div>
+    
+</body>
 </html>
