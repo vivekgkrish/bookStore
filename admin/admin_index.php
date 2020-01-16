@@ -117,9 +117,9 @@ if($_SESSION['username'] == "") {
                theBookStore
            </div>
            <div id="menuBar">
-              <div class="menuItem" id="Books"><a href="admin_index.php">Books</div>
-              <div class="menuItem" id="Categories"><a href="#">Categories</div>
-              <div class="menuItem" id="Users"><a href="#">Users</div>
+               <div class="menuItem" id="Books"><a href="admin_index.php">Books</a></div>
+              <div class="menuItem" id="Categories"><a href="#">Categories</a></div>
+              <div class="menuItem" id="Users"><a href="#">Users</a></div>
                
            </div>
            
