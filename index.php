@@ -1,6 +1,3 @@
-$ echo '{}' > composer.json
-$ git add composer.json
-$ git commit -m "add composer.json for PHP app detection"
 
  <?php include "header.php" ?>
 
@@ -52,3 +49,8 @@ $ git commit -m "add composer.json for PHP app detection"
     
 </body>
 </html>
+
+$ echo '{}' > composer.json
+$ git add composer.json
+$ git commit -m "add composer.json for PHP app detection"
+
